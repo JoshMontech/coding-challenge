@@ -11,6 +11,7 @@ const textColor = {
     primary: generateColorClass("text-primary"),
     secondary: generateColorClass("text-secondary"),
     tertiary: generateColorClass("text-tertiary"),
+    quaternary: generateColorClass("text-quaternary"),
     accent: generateColorClass("text-accent"),
 }
 
@@ -18,6 +19,7 @@ const backgroundColor = {
     primary: generateColorClass("bg-primary"),
     secondary: generateColorClass("bg-secondary"),
     tertiary: generateColorClass("bg-tertiary"),
+    quaternary: generateColorClass("bg-quaternary"),
     accent: generateColorClass("bg-accent"),
 }
 
@@ -35,6 +37,12 @@ module.exports = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        screens: {
+            sm: "500px",
+            md: "768px",
+            lg: "1080px",
+            max: "1280px",
+        },
         extend: {
             textColor,
             backgroundColor,

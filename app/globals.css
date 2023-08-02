@@ -6,42 +6,36 @@
     /* default (light mode) */
     :root {
         /* background color */
-        /*  light gray */
-        --bg-primary: 255, 255, 255;
-        /* emerald green */
-        --bg-secondary: 52, 199, 89;
-        /* sky blue */
-        --bg-tertiary: 0, 123, 255;
-        /* bright orange */
-        --bg-accent: 255, 149, 0;
+        /*  dark blue */
+        --bg-primary: 17, 24, 39;
+        /* indigo */
+        --bg-secondary: 99, 102, 241;
+        /* black */
+        --bg-tertiary: 0, 0, 0;
+        /* gray */
+        --bg-quaternary: 75, 85, 99;
+        /* white */
+        --bg-inverse-primary: 255, 255, 255;
+        /* dark indigo */
+        --bg-inverse-secondary: 79, 70, 229;
 
         /* text color */
+        /* white */
+        --text-primary: 255, 255, 255;
+        /* light gray */
+        --text-secondary: 209, 213, 219;
         /* dark gray */
-        --text-primary: 51, 51, 51;
-        /* emerald green */
-        --text-secondary: 52, 199, 89;
-        /* sky blue */
-        --text-tertiary: 0, 123, 255;
-        /* bright orange */
-        --text-accent: 255, 149, 0;
-
-        /* border color */
-        /* dark gray */
-        --border-primary: 51, 51, 51;
-        /* emerald green */
-        --border-secondary: 52, 199, 89;
-        /* sky blue */
-        --border-tertiary: 0, 123, 255;
-        /* bright orange */
-        --border-accent: 255, 149, 0;
+        --text-tertiary: 107, 114, 128;
+        /* indigo */
+        --text-accent: 129, 140, 248;
     }
     /* dark mode */
     [data-theme="dark"] {
         /* background color */
-        /*  dark gray */
-        --bg-primary: 49, 51, 56;
+        /*  white */
+        --bg-primary: 255, 255, 255;
         /* emerald green */
-        --bg-secondary: 52, 199, 89;
+        --bg-secondary: 79, 70, 229;
         /* sky blue */
         --bg-tertiary: 0, 123, 255;
         /* bright orange */
@@ -56,15 +50,5 @@
         --text-tertiary: 0, 123, 255;
         /* bright orange */
         --text-accent: 255, 149, 0;
-
-        /* border color */
-        /* dark gray */
-        --border-primary: 0, 0, 0;
-        /* emerald green */
-        --border-secondary: 52, 199, 89;
-        /* sky blue */
-        --border-tertiary: 0, 123, 255;
-        /* bright orange */
-        --border-accent: 255, 149, 0;
     }
 }

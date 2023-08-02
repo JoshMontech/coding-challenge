@@ -1,8 +1,9 @@
-import MainFooter from "@/components/MainFooter"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import Providers from "./providers"
-import ThemeSwitcher from "./themeSwitcher"
 import MainHeader from "@/components/MainHeader"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({
     children,
@@ -10,13 +11,11 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-            <body className="relative min-h-[100%] max-w-[100vw] text-[100%]">
+        <html lang="en" className={inter.className}>
+            <body className="relative h-[v00vh] min-h-[100vh] max-w-[100vw] bg-primary text-[100%] text-primary">
                 <Providers>
                     <MainHeader />
-                    <ThemeSwitcher />
                     {children}
-                    <MainFooter />
                 </Providers>
             </body>
         </html>
