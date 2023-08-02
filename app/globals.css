@@ -30,25 +30,29 @@
         --text-accent: 129, 140, 248;
     }
     /* dark mode */
-    [data-theme="dark"] {
+    [data-theme="funk"] {
         /* background color */
-        /*  white */
-        --bg-primary: 255, 255, 255;
-        /* emerald green */
-        --bg-secondary: 79, 70, 229;
-        /* sky blue */
-        --bg-tertiary: 0, 123, 255;
-        /* bright orange */
-        --bg-accent: 255, 149, 0;
+        /*  dark blue */
+        --bg-primary: 58, 16, 120;
+        /* indigo */
+        --bg-secondary: 47, 88, 205;
+        /* black */
+        --bg-tertiary: 55, 149, 189;
+        /* gray */
+        --bg-quaternary: 78, 49, 170;
+        /* white */
+        --bg-inverse-primary: 55, 149, 189;
+        /* dark indigo */
+        --bg-inverse-secondary: 47, 88, 205;
 
         /* text color */
-        /* dark gray */
+        /* white */
         --text-primary: 255, 255, 255;
-        /* emerald green */
-        --text-secondary: 52, 199, 89;
-        /* sky blue */
-        --text-tertiary: 0, 123, 255;
-        /* bright orange */
-        --text-accent: 255, 149, 0;
+        /* light gray */
+        --text-secondary: 209, 213, 219;
+        /* dark gray */
+        --text-tertiary: 107, 114, 128;
+        /* indigo */
+        --text-accent: 55, 149, 189;
     }
 }

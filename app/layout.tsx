@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google"
+import { ApolloWrapper } from "@/lib/apollo-provider"
 import "./globals.css"
 import Providers from "./providers"
 import MainHeader from "@/components/MainHeader"
@@ -14,8 +15,10 @@ export default function RootLayout({
         <html lang="en" className={inter.className}>
             <body className="relative h-[v00vh] min-h-[100vh] max-w-[100vw] bg-primary text-[100%] text-primary">
                 <Providers>
-                    <MainHeader />
-                    {children}
+                    <ApolloWrapper>
+                        <MainHeader />
+                        {children}
+                    </ApolloWrapper>
                 </Providers>
             </body>
         </html>
