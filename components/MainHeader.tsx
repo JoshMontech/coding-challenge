@@ -61,13 +61,17 @@ const MainHeader = () => {
                     }`}
                 />
                 <div
-                    className={`transition-height fixed left-0 right-0 top-0 mx-2 mt-2 rounded-[6px] bg-white text-black duration-300 ease-in-out ${
+                    className={`transition-height fixed left-0 right-0 top-0 mx-2 mt-2 flex rounded-[6px] bg-white text-black duration-300 ease-in-out ${
                         expanded
                             ? "z-20 h-[395px] opacity-100"
                             : "z-[-10] h-0 opacity-0"
                     }`}
                 >
-                    <div className=" mb-[24px] rounded-[6px] bg-inversePrimary p-[24px]">
+                    <div
+                        className={`mb-[24px] h-full w-full rounded-[6px] bg-inversePrimary p-[24px] ${
+                            expanded ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
                         <div className="mb-[24px] flex justify-between">
                             <button onClick={() => toggleTheme()}>
                                 <Logo color={"#4F46E5"} />
