@@ -11,7 +11,7 @@ const MainHeader = () => {
     const { theme, setTheme } = useTheme()
 
     const toggleTheme = () => {
-        theme !== "root" ? setTheme("funk") : setTheme("base")
+        theme === "base" ? setTheme("funk") : setTheme("base")
     }
 
     return (
@@ -57,7 +57,7 @@ const MainHeader = () => {
                 <div
                     onClick={() => setExpanded(false)}
                     className={`fixed bottom-0 left-0 right-0 top-0 bg-[#6b7280] transition-opacity duration-300 ease-in-out ${
-                        expanded ? "z-10 opacity-75" : "z-[-1] opacity-0"
+                        expanded ? "z-10 opacity-75" : "z-[-1] h-0 opacity-0"
                     }`}
                 />
                 <div
@@ -69,7 +69,9 @@ const MainHeader = () => {
                 >
                     <div className=" mb-[24px] rounded-[6px] bg-inversePrimary p-[24px]">
                         <div className="mb-[24px] flex justify-between">
-                            <Logo color={"#4F46E5"} />
+                            <button onClick={() => toggleTheme()}>
+                                <Logo color={"#4F46E5"} />
+                            </button>
                             <button
                                 className="mt-[-16px] text-2xl text-tertiary"
                                 onClick={() => setExpanded(false)}
