@@ -21,6 +21,8 @@ const backgroundColor = {
     tertiary: generateColorClass("bg-tertiary"),
     quaternary: generateColorClass("bg-quaternary"),
     accent: generateColorClass("bg-accent"),
+    inversePrimary: generateColorClass("bg-inverse-primary"),
+    inverseSecondary: generateColorClass("bg-inverse-secondary"),
 }
 
 const borderColor = {
