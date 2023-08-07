@@ -11,11 +11,21 @@ export default function Home() {
     const [createNewUser] = useMutation(CREATE_NEW_USER)
     const [email, setEmail] = useState("")
     const [toastBar, setToastBar] = useState({ message: "", type: "error" })
+
     const validateEmail = (email) => {
         var re = /\S+@\S+\.\S+/
         return re.test(email)
     }
-    const handleSubmit = (event) => {
+
+    const emailAdded = (email) => {
+        setToastBar({
+            message: `"${email}" added!`,
+            type: `success`,
+        })
+        setEmail("")
+    }
+
+    const handleSubmit = async (event) => {
         event.preventDefault()
         if (!validateEmail(email)) {
             setToastBar({
@@ -23,24 +33,28 @@ export default function Home() {
                 type: "error",
             })
             return
-        } else console.log(email)
-        createNewUser({
-            variables: {
-                name: event.target.email.value,
-                username: event.target.email.value,
-                email: event.target.email.value,
-            },
-        })
-            .then((res) => {
-                setToastBar({
-                    message: `successfully created`,
-                    type: `success`,
-                })
-                setEmail("")
-                console.log(res.data)
+        }
+
+        try {
+            const resp = await createNewUser({
+                variables: {
+                    name: event.target.email.value,
+                    username: event.target.email.value,
+                    email: event.target.email.value,
+                },
             })
-            .catch((error) => console.error(error.message))
+
+            const { email } = resp.data.createUser
+
+            emailAdded(email)
+        } catch (error) {
+            setToastBar({
+                message: "An issue occurred",
+                type: "error",
+            })
+        }
     }
+
     return (
         <main
             className="relative mx-auto flex h-full w-full max-w-[1280px] flex-col px-[24px]"
