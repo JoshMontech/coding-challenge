@@ -94,7 +94,7 @@ export default function Home() {
                                     <div
                                         className={`rounded-[4px] px-[16px] py-[12px] text-center md:self-start ${
                                             toastBar.type === "error"
-                                                ? "border-red-500 bg-red-200 text-red-500"
+                                                ? "border-[2px] border-red-500 bg-red-200 text-red-500"
                                                 : "border-[2px] border-green-500 bg-green-200 text-green-500"
                                         }`}
                                     >
