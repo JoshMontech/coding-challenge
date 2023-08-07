@@ -15,7 +15,11 @@ const MainHeader = () => {
     }
 
     return (
-        <header className="relative z-[11] flex w-full max-w-[1280px] bg-primary p-[24px] text-primary max:mx-auto">
+        <header
+            className={`relative flex w-full max-w-[1280px] bg-primary p-[24px] text-primary max:mx-auto ${
+                expanded ? "z-10" : "z-[0]"
+            }`}
+        >
             <nav className="flex min-h-[42px] w-full items-center justify-between">
                 <div className="flex items-center gap-[40px]">
                     <button onClick={() => toggleTheme()}>
@@ -102,10 +106,9 @@ const MainHeader = () => {
                             </button>
                             <div className="text-center">
                                 Existing Customer?
-                                <a className="font-bold" href="/">
-                                    {" "}
-                                    Login
-                                </a>
+                                <Link className="font-bold" href="/">
+                                    &nbsp;Login
+                                </Link>
                             </div>
                         </ul>
                     </div>

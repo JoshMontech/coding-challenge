@@ -1,14 +1,13 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 import splash from "../public/splash.svg"
 import { useState } from "react"
 import { gql, useMutation } from "@apollo/client"
 import { MUTATION_CREATE_NEW_USER } from "@/lib/graphql/mutationCreateNewUser"
 const CREATE_NEW_USER = gql(MUTATION_CREATE_NEW_USER)
-import { useTheme } from "next-themes"
 
 export default function Home() {
-    const { theme, setTheme } = useTheme()
     const [createNewUser] = useMutation(CREATE_NEW_USER)
     const [email, setEmail] = useState("")
     const [toastBar, setToastBar] = useState({ message: "", type: "error" })
@@ -44,12 +43,12 @@ export default function Home() {
     }
     return (
         <main
-            className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col px-[24px]"
+            className="relative mx-auto flex h-full w-full max-w-[1280px] flex-col px-[24px]"
             style={{ maxHeight: "calc(100vh-90px)" }}
         >
             <section className="relative flex h-full">
                 <div className="relative mt-[24px] flex flex-col gap-[24px] md:mt-[100px] lg:mt-[125px]">
-                    <a
+                    <Link
                         className="flex items-center gap-[16px] self-start rounded-[14px] bg-tertiary py-[4px] pl-[4px] pr-[8px] text-[12px] leading-[20px]"
                         href="/"
                     >
@@ -60,7 +59,7 @@ export default function Home() {
                         <div className="mr-2 text-xl text-gray-400">
                             &#8250;
                         </div>
-                    </a>
+                    </Link>
                     <div className="flex w-full flex-col gap-[20px] md:max-w-[400px] lg:max-w-[475px]">
                         <div className="flex flex-col">
                             <div className="lin text-[36px] font-black leading-[40px] md:text-5xl">
@@ -111,8 +110,10 @@ export default function Home() {
                         </form>
                         <div className="text-[14px] text-sm leading-[20px] text-secondary">
                             Start your free 14-day trial, no credit card
-                            necessary. By providing your email, you agree to our
-                            <a className="font-bold"> terms or service.</a>
+                            necessary. By providing your email, you agree to our{" "}
+                            <Link className="font-bold" href="/">
+                                &nbsp;terms or service.
+                            </Link>
                         </div>
                     </div>
                 </div>

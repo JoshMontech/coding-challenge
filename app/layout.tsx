@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={inter.className}>
-            <body className="relative h-[v00vh] min-h-[100vh] max-w-[100vw] bg-primary text-[100%] text-primary">
+            <body className="relative min-h-[100vh] max-w-[100vw] bg-primary text-[100%] text-primary">
                 <Providers>
                     <ApolloWrapper>
                         <MainHeader />
