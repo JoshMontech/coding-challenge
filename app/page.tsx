@@ -95,10 +95,10 @@ export default function Home() {
                     </div>
                     <div className="mt-[24px] flex max-w-[509px] flex-col gap-[16px]">
                         <form onSubmit={(e) => handleSubmit(e)}>
-                            <div className="flex w-full flex-col gap-[12px]">
+                            <div className="relative flex w-full flex-col gap-[12px]">
                                 {toastBar.message !== "" && (
                                     <div
-                                        className={`rounded-[4px] px-[16px] py-[12px] text-center md:self-start ${
+                                        className={`absolute top-[-42px] rounded-[4px] px-[16px] py-[4px] text-center md:self-start ${
                                             toastBar.type === "error"
                                                 ? "border-[2px] border-red-500 bg-red-200 text-red-500"
                                                 : "border-[2px] border-green-500 bg-green-200 text-green-500"
