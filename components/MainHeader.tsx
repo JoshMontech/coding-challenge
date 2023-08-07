@@ -55,7 +55,7 @@ const MainHeader = () => {
                         src={hamburger}
                         height={24}
                         width={24}
-                        alt="splash image"
+                        alt="hamburger image"
                     />
                 </button>
                 <div

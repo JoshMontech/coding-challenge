@@ -134,6 +134,8 @@ export default function Home() {
                 <div className="fixed bottom-[-100px] right-0 z-[-10] md:bottom-auto md:right-[-275px] lg:right-[-125px] max:absolute max:right-0">
                     <Image
                         src={splash}
+                        // added to prevent console warning -- redundant
+                        style={{ width: 625, height: 625 }}
                         height={625}
                         width={625}
                         alt="splash image"
