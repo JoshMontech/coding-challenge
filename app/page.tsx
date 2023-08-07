@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import splash from "../public/splash.svg"
+import splash from "@/public/splash.svg"
+import chevron from "@/public/chevron.svg"
 import { useState } from "react"
 import { gql, useMutation } from "@apollo/client"
 import { MUTATION_CREATE_NEW_USER } from "@/lib/graphql/mutationCreateNewUser"
@@ -71,7 +72,12 @@ export default function Home() {
                         </div>
                         <div className="">Visit our careers page</div>
                         <div className="mr-2 text-xl text-gray-400">
-                            &#8250;
+                            <Image
+                                src={chevron}
+                                height={11}
+                                width={6}
+                                alt="chevron icon"
+                            />
                         </div>
                     </Link>
                     <div className="flex w-full flex-col gap-[20px] md:max-w-[400px] lg:max-w-[475px]">
